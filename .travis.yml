@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '8'
+cache:
+  directories:
+  - node_modules
+script:
+- npm run lint-app
+- npm run typecheck-app
+- npm run lint-functions
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  token:
+    secure: TKKgAgPBThbHtOz3VBZLGz+bjDi53cN16cN3+t99NddZmIDSExDvuECfueeDbYDmoBGOIKVGcDKjfMmxc7Smoj82Qx+hq8ERF0MPLVeq9Vf+4nxhkCl9QWVGphKybaqwXH9ifaVG/drzcaNryw+VTAK6rGagYCiqP+wpWoMoHlhawEnV94BxAW2VMYSZV/HEQPz/r9BXZ2gdSjYMjgcK0USQ+GiSuN4QOKu16lUo2Hgrr+8+pP/RThdU6ofodUaBq+dGJ3hcC6r/N9s0QgBgV+ij4h9Y5JYdz7tJsYUDEb5paznIaM8fkXzWKlMoMbMbwxSQBvv+kPZVOM+ARXqxXhqoJuKBp/xnweCYOvYMcFFLPItgsNGOdg6uqROMeM4jhh+whasAQagGjk8eJUuWB3afDVVpywiI9YLTJkZ3M8gG73eQ7OWrPn7d2lPuuw+FwIxhFO9y5AFvgHA/8guvnQ4fgLm7lp4Q7M+WaCRXNUlMAec4M4ynHqsRVQKXwmsHZkMArWiTRmMxJ5+dfIEVQybInHAY0gRtFzJQ7urpoNvLO9ZwRYeqtbsLz2UZvZfWxLw4OMkXMC1wKIAhIRq9bmzucR7mp/Knjij6DQZORNU1xV0s9nmemRV5iLB8l/WgC8A5gzk6Q6QnZ3ncP+722/V+tBi9lnS/thRykEP4J98=
